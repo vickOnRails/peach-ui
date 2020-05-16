@@ -7,6 +7,3 @@ import Button from "./Button/Button";
 import Form from "./Form/Form";
 
 export { Form, Button };
-
-const wrapper = document.getElementById("container");
-ReactDOM.render(<App />, wrapper);
