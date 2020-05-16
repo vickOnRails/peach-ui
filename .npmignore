@@ -1,0 +1,7 @@
+dist/
+node_modules/
+src/
+scripts/
+.babelrc
+webpack.config.js
+yarn.lock

@@ -1,14 +1,22 @@
 {
-  "name": "smart-ui",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "prudent-ui",
+  "description": "Experimental component library",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
   "license": "MIT",
+  "author": {
+    "email": "victorofoegbu0009@gmail.com",
+    "name": "Victor Ofoegbu",
+    "url": "https://victorofoegbu.com"
+  },
   "scripts": {
     "build": "webpack --mode production",
-    "build:dist": "node scripts/build",
+    "clean": "rimraf lib",
+    "build:dist": "yarn clean && node scripts/build",
     "start": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
+    "@babel/cli": "^7.8.4",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "react": "^16.13.1",
@@ -22,6 +30,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "prop-types": "^15.7.2",
+    "rimraf": "^3.0.2",
     "webpack-dev-server": "^3.11.0"
   }
 }

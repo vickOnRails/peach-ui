@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Button from "./js/components/Button/Button";
-import Form from "./js/components/Form/Form";
+import Button from "./Button/Button";
+import Form from "./Form/Form";
 
 const App = () => {
   const [value, setValue] = useState("");
