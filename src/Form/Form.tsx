@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-interface FormProps extends HTMLFormElement {}
+type FormProps = HTMLFormElement;
 
 const Form: FC<FormProps> = ({ children }) => {
   return <form>{children}</form>;

@@ -1,7 +1,14 @@
 import React, { FC } from "react";
 
-interface ButtonProps extends HTMLButtonElement {}
+type ButtonType = "button" | "submit" | "reset";
 
-const Button: FC<ButtonProps> = ({ children }) => <button>{children}</button>;
+interface ButtonProps extends HTMLButtonElement {
+  type: ButtonType;
+}
+
+const Button: FC<ButtonProps> = ({ type, children }) => {
+  // eslint-disable-next-line react/button-has-type
+  return <button type={type}>{children}</button>;
+};
 
 export default Button;
