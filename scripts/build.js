@@ -14,14 +14,14 @@ const buildUMD = async () => {
   // FIXME: Make this operation asynchronous
   exec(
     `tsc --rootDir ${srcPath} --outDir ${umdPath} --declaration false`,
-    (error, stdout, stderr) => {
+    (error, stderr) => {
       if (error) {
         console.log(red(error.message));
         return;
       }
 
       console.log(green("UMD Modules Built"));
-      console.log(red(stderr));
+      console.log(red(stderr.message));
     }
   );
 };
@@ -31,7 +31,7 @@ const buildCJS = () => {
 
   exec(
     `tsc --rootDir ${srcPath} --outDir ${cjsPath} --module commonjs --declaration false`,
-    (error, stdout, stderr) => {
+    (error, stderr) => {
       if (error) {
         console.log(red(error.message));
         return;
@@ -47,8 +47,8 @@ const copyTypes = () => {
   console.log(cyan("Copying Types"));
 
   exec(
-    `tsc --emitDeclarationOnly --rootDir ${srcPath} --declarationDir ${typesPath} --declaration true`,
-    (error, stdout, stderr) => {
+    `tsc --emitDeclarationOnly --declarationDir ${typesPath} --declaration true`,
+    (error, stderr) => {
       if (error) {
         console.log(red(error.message));
         return;

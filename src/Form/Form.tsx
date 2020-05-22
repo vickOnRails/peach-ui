@@ -1,9 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, DOMAttributes } from "react";
+import Button from "../Button/Button";
 
-type FormProps = HTMLFormElement;
+type FormProps = DOMAttributes<HTMLFormElement>;
 
-const Form: FC<FormProps> = ({ children }) => {
-  return <form>{children}</form>;
+const Form: FC<FormProps> = ({ children, ...rest }) => {
+  return (
+    <form {...rest}>
+      {children}
+      <Button>Submit</Button>
+    </form>
+  );
 };
 
 export default Form;
