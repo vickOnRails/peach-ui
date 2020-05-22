@@ -25,9 +25,12 @@
     "plugin:react/recommended",
     "prettier"
   ],
+  "ignorePatterns": ["build.js"],
   "rules": {
     "react/prop-types": 0,
     "eslint/quotes": 0,
-    "@typescript-eslint/quotes": ["error", "double"]
+    "react/button-has-type": 0,
+    "@typescript-eslint/quotes": ["error", "double"],
+    "react/jsx-props-no-spreading": 0
   }
 }

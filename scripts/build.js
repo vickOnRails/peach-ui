@@ -13,7 +13,6 @@ const buildUMD = async () => {
 
   // FIXME: Make this operation asynchronous
   exec(
-    // `npx tsc --rootDir ${srcPath} --outDir ${umdPath}`,
     `tsc --rootDir ${srcPath} --outDir ${umdPath} --declaration false`,
     (error, stdout, stderr) => {
       if (error) {
@@ -21,7 +20,7 @@ const buildUMD = async () => {
         return;
       }
 
-      console.log(green(`UMD Modules Built`));
+      console.log(green("UMD Modules Built"));
       console.log(red(stderr));
     }
   );
@@ -38,7 +37,7 @@ const buildCJS = () => {
         return;
       }
 
-      console.log(green(`CJS Modules Built`));
+      console.log(green("CJS Modules Built"));
       console.log(green(stderr));
     }
   );
@@ -48,7 +47,6 @@ const copyTypes = () => {
   console.log(cyan("Copying Types"));
 
   exec(
-    // `npx babel ${srcPath} --out-dir ${libPath} --env-name "cjs"`,
     `tsc --emitDeclarationOnly --rootDir ${srcPath} --declarationDir ${typesPath} --declaration true`,
     (error, stdout, stderr) => {
       if (error) {
@@ -56,7 +54,7 @@ const copyTypes = () => {
         return;
       }
 
-      console.log(green(`Types Copied`));
+      console.log(green("Types Copied"));
       console.log(green(stderr));
     }
   );

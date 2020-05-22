@@ -1,3 +1,4 @@
-1. Add Typescript support
-2. Add ESLint and Stylint support
+1. Add Typescript support (Done)
+2. Add ESLint and Stylint support (Done)
 3. Setup testing with Jest
+4. Setup story book
