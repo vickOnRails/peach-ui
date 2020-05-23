@@ -16,12 +16,12 @@ const buildUMD = async () => {
     `tsc --rootDir ${srcPath} --outDir ${umdPath} --declaration false`,
     (error, stderr) => {
       if (error) {
-        console.log(red(error.message));
+        console.log(red(stderr));
         return;
       }
 
       console.log(green("UMD Modules Built"));
-      console.log(red(stderr.message));
+      console.log(red(stderr));
     }
   );
 };
@@ -33,7 +33,7 @@ const buildCJS = () => {
     `tsc --rootDir ${srcPath} --outDir ${cjsPath} --module commonjs --declaration false`,
     (error, stderr) => {
       if (error) {
-        console.log(red(error.message));
+        console.log(red(stderr));
         return;
       }
 
@@ -47,10 +47,10 @@ const copyTypes = () => {
   console.log(cyan("Copying Types"));
 
   exec(
-    `tsc --emitDeclarationOnly --declarationDir ${typesPath} --declaration true`,
+    `tsc --emitDeclarationOnly --declaration true --declarationDir ${typesPath}`,
     (error, stderr) => {
       if (error) {
-        console.log(red(error.message));
+        console.log(red(stderr));
         return;
       }
 
