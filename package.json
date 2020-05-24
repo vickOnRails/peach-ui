@@ -1,7 +1,7 @@
 {
-  "name": "prudent-ui",
+  "name": "peach-ui",
   "description": "Experimental component library",
-  "version": "0.1.4",
+  "version": "0.1.0",
   "main": "./lib/cjs",
   "license": "MIT",
   "repository": "https://github.com/vickOnRails/smart-ui/",
