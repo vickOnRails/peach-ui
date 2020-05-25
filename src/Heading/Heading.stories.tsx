@@ -51,7 +51,9 @@ export const Heading4 = (): JSX.Element => (
 );
 export const Heading5 = (): JSX.Element => (
   <>
-    <Heading level="h5">Heading 5</Heading>
+    <Heading centered level="h5">
+      Heading 5
+    </Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio

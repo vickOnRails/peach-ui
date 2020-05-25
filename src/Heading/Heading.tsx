@@ -1,4 +1,5 @@
 import React, { DOMAttributes, FC } from "react";
+import styled from "@emotion/styled";
 
 export type HeadingLevelProps = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type HeadingSizeProps = "normal";
@@ -34,7 +35,12 @@ const Heading: FC<HeadingProps> = (props) => {
   const { level, size, centered, responsive, children, ...rest } = props;
   const HeadingLevel = level;
 
-  return <HeadingLevel {...rest}>{children}</HeadingLevel>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const StyledHeading = styled(HeadingLevel)<any>`
+    background: red;
+  `;
+
+  return <StyledHeading {...rest}>{children}</StyledHeading>;
 };
 
 Heading.defaultProps = {
