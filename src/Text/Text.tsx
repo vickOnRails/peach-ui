@@ -7,4 +7,6 @@ const Text: FC<TextProps> = (props) => {
   return <p>{children}</p>;
 };
 
+Text.displayName = "Text";
+
 export default Text;
