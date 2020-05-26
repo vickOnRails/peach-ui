@@ -1,9 +1,13 @@
 import React, { ReactNode, useContext, FC } from "react";
 import { ThemeContext } from "@emotion/core";
 
+interface ThemeProps {
+  color: string;
+}
+
 export interface ThemeProviderProps {
   children: ReactNode;
-  theme: object;
+  theme: ThemeProps;
 }
 
 /**

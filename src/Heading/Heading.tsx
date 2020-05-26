@@ -46,8 +46,9 @@ const StyledHeading = styled<any>("h1", {
    */
   shouldForwardProp: (props) =>
     !["as", "responsive", "size", "centered"].includes(props),
-})(() => ({
+})((props) => ({
   color: "red",
+  textAlign: props.centered ? "center" : "left",
 }));
 
 const Heading: FC<HeadingProps> = (props) => {

@@ -1,14 +1,26 @@
-import React from "react";
-import ThemeProvider from "../src/ThemeProvider/ThemeProvider";
+import React, { FC } from "react";
+
 import { addDecorator } from "@storybook/react";
 
-export const Provider = ({ children }) => (
-  <>
-    <ThemeProvider theme={{}}>
-      <p>SomethingLight</p>
-      {children}
-    </ThemeProvider>
-  </>
-);
+import ThemeProvider, {
+  ThemeProviderProps,
+} from "../src/ThemeProvider/ThemeProvider";
 
-addDecorator((StoryFn: Function) => <Provider>{StoryFn()}</Provider>);
+// App theme
+const theme = {
+  color: "brown",
+};
+
+export const Provider: FC<ThemeProviderProps> = (props) => {
+  const { children } = props;
+  return (
+    <>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </>
+  );
+};
+
+// Wrap all stories in a themeContext
+addDecorator((StoryFn: Function) => (
+  <Provider theme={theme}>{StoryFn()}</Provider>
+));
