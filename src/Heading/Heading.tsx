@@ -31,16 +31,32 @@ export interface HeadingProps extends DOMAttributes<HTMLHeadingElement> {
   centered?: boolean;
 }
 
+/**
+ * @param level - Specifies the type of Heading (h1, h2, h3, h4, h5, h6)
+ * @param centered - If set to `true` centers the heading
+ * @param responsive - If set to `true`, heading text will scale according to the resolution
+ *
+ * The `as` property of @emotion does not let StyledHeading render the default `h1`
+ *  FIXME:  Replace `any` with the appropriate type for the styled function
+ */
+
+const StyledHeading = styled<any>("h1", {
+  /**
+   * Prevent emotion from passing invalid props to native HTML element
+   */
+  shouldForwardProp: (props) =>
+    !["as", "responsive", "size", "centered"].includes(props),
+})(() => ({
+  color: "red",
+}));
+
 const Heading: FC<HeadingProps> = (props) => {
-  const { level, size, centered, responsive, children, ...rest } = props;
-  const HeadingLevel = level;
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const StyledHeading = styled(HeadingLevel)<any>`
-    background: red;
-  `;
-
-  return <StyledHeading {...rest}>{children}</StyledHeading>;
+  const { children, level } = props;
+  return (
+    <StyledHeading as={level} {...props}>
+      {children}
+    </StyledHeading>
+  );
 };
 
 Heading.defaultProps = {

@@ -1,5 +1,4 @@
 import React from "react";
-// import { action } from "@storybook/react";
 
 import Heading from "./Heading";
 import Text from "../Text/Text";

@@ -2,3 +2,4 @@
 2. Add ESLint and Stylint support (Done)
 3. Setup testing with Jest (Done)
 4. Setup story book (Done)
+5. Add JSdoc support
