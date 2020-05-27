@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-
 import { addDecorator } from "@storybook/react";
 
+import { CSSReset } from "../src/CSSReset";
 import ThemeProvider, {
   ThemeProviderProps,
 } from "../src/ThemeProvider/ThemeProvider";
@@ -15,6 +15,7 @@ export const Provider: FC<ThemeProviderProps> = (props) => {
   const { children } = props;
   return (
     <>
+      <CSSReset />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </>
   );
