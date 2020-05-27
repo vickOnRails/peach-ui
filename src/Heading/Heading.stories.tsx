@@ -2,20 +2,15 @@ import React from "react";
 
 import Heading from "./Heading";
 import Text from "../Text/Text";
-import styled from "../ThemeProvider/styled";
 
 export default {
   title: "Heading",
   component: Heading,
 };
 
-const StyledHeading1 = styled(Heading)`
-  color: ${(props) => props.theme.color};
-`;
-
 export const Heading1 = (): JSX.Element => (
   <>
-    <StyledHeading1 level="h1">Heading 1</StyledHeading1>
+    <Heading level="h1">Heading 1</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio

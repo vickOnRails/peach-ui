@@ -1,6 +1,8 @@
 import React, { DOMAttributes, FC } from "react";
 import styled from "@emotion/styled";
 
+import theme from "../Theme";
+
 export type HeadingLevelProps = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type HeadingSizeProps = "normal";
 
@@ -47,7 +49,7 @@ const StyledHeading = styled<any>("h1", {
   shouldForwardProp: (props) =>
     !["as", "responsive", "size", "centered"].includes(props),
 })((props) => ({
-  color: "red",
+  color: theme.colors.black,
   textAlign: props.centered ? "center" : "left",
 }));
 
