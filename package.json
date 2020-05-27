@@ -20,11 +20,14 @@
     "test:watch": "jest --watch",
     "start": "webpack-dev-server --open --mode development",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "playroom": "playroom start",
+    "playroom:build": "playroom build"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "playroom": "^0.18.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
