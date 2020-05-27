@@ -51,6 +51,7 @@ const StyledHeading = styled<any>("h1", {
 })((props) => ({
   color: theme.colors.black,
   textAlign: props.centered ? "center" : "left",
+  fontSize: theme.typography.sizes[props.as as HeadingLevelProps].fontSize,
 }));
 
 const Heading: FC<HeadingProps> = (props) => {
