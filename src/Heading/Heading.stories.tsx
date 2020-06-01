@@ -43,7 +43,9 @@ export const Heading3 = (): JSX.Element => (
 
 export const Heading4 = (): JSX.Element => (
   <>
-    <Heading level="h4">Heading 4</Heading>
+    <Heading level="h4" centered size="normal">
+      Heading 4
+    </Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
@@ -54,9 +56,7 @@ export const Heading4 = (): JSX.Element => (
 
 export const Heading5 = (): JSX.Element => (
   <>
-    <Heading centered level="h5">
-      Heading 5
-    </Heading>
+    <Heading level="h5">Heading 5</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio

@@ -96,6 +96,23 @@ export const CSSReset = () => (
         background: transparent;
       }
 
+      html {
+        line-height: 1.5;
+      }
+      * {
+        line-height: inherit;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.25;
+        margin-bottom: 0.5rem;
+      }
+
       main,
       article,
       aside,
@@ -144,6 +161,8 @@ export const CSSReset = () => (
       /* force a vertical scrollbar to prevent a jumpy page */
       html {
         overflow-y: scroll;
+        font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       }
 
       /* we use a lot of ULs that aren't bulleted.
