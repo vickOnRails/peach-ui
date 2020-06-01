@@ -2,6 +2,7 @@ import React, { DOMAttributes, FC } from "react";
 import styled from "@emotion/styled";
 
 import theme from "../Theme";
+import { Sizes } from "../util/types";
 
 export type HeadingLevelProps = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type HeadingSizeProps = "normal";
@@ -24,7 +25,7 @@ export interface HeadingProps extends DOMAttributes<HTMLHeadingElement> {
    * FIXME: This doesn't work yet
    * Can either be "large", "small" , "medium" or CSS rem, em, px etc
    */
-  size?: string;
+  size?: Sizes;
 
   /**
    *  Determines if the heading is centered or not
@@ -51,7 +52,9 @@ const StyledHeading = styled<any>("h1", {
 })((props) => ({
   color: theme.colors.black,
   textAlign: props.centered ? "center" : "left",
-  fontSize: theme.typography.sizes[props.as as HeadingLevelProps].fontSize,
+  fontSize: props.size
+    ? theme.typography.sizes[props.size as Sizes].fontSize
+    : theme.typography.sizes[props.as as HeadingLevelProps].fontSize,
   fontWeight: theme.typography.sizes[props.as as HeadingLevelProps].fontWeight,
 }));
 
@@ -66,7 +69,6 @@ const Heading: FC<HeadingProps> = (props) => {
 
 Heading.defaultProps = {
   responsive: true,
-  size: "normal",
   centered: false,
 };
 

@@ -8,6 +8,45 @@ export default {
   component: Heading,
 };
 
+export const Display1 = (): JSX.Element => (
+  <>
+    <Heading level="h1" size="display1">
+      Display 1
+    </Heading>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
+      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
+      repudiandae officia, eius magni odit!
+    </Text>
+  </>
+);
+
+export const Display2 = (): JSX.Element => (
+  <>
+    <Heading level="h1" size="display2">
+      Heading 1
+    </Heading>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
+      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
+      repudiandae officia, eius magni odit!
+    </Text>
+  </>
+);
+
+export const Display3 = (): JSX.Element => (
+  <>
+    <Heading level="h1" size="display3">
+      Heading 1
+    </Heading>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
+      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
+      repudiandae officia, eius magni odit!
+    </Text>
+  </>
+);
+
 export const Heading1 = (): JSX.Element => (
   <>
     <Heading level="h1">Heading 1</Heading>
@@ -43,9 +82,7 @@ export const Heading3 = (): JSX.Element => (
 
 export const Heading4 = (): JSX.Element => (
   <>
-    <Heading level="h4" centered size="normal">
-      Heading 4
-    </Heading>
+    <Heading level="h4">Heading 4</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
