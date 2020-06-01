@@ -49,7 +49,9 @@ export const Display3 = (): JSX.Element => (
 
 export const Heading1 = (): JSX.Element => (
   <>
-    <Heading level="h1">Heading 1</Heading>
+    <Heading level="h1" size={40}>
+      Heading 1
+    </Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
       sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
