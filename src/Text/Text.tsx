@@ -5,16 +5,18 @@ import styled from "../ThemeProvider/styled";
 
 interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: Sizes;
+  centered?: boolean;
 }
 
 const StyledText = styled.p<TextProps>`
   font-size: ${({ size }: TextProps): string => getFontSizeText(size)};
+  text-align: ${({ centered }): string => (centered ? "center" : "left")};
 `;
 
 const Text: FC<TextProps> = (props) => {
-  const { size = "body", children, ...rest } = props;
+  const { size = "body", centered, children, ...rest } = props;
   return (
-    <StyledText size={size} {...rest}>
+    <StyledText size={size} centered={centered} {...rest}>
       {children}
     </StyledText>
   );
