@@ -17,7 +17,6 @@ describe("Heading", () => {
     const { container } = render(
       <Heading level={headingLevel}>{headingText}</Heading>
     );
-
     expect(container.querySelector(headingLevel)).toBeInTheDocument();
   });
 });

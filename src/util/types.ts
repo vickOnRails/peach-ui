@@ -9,6 +9,7 @@ export type Sizes =
   | "heading5"
   | "heading6"
   | "body"
-  | number;
+  | number
+  | undefined;
 
 export type HeadingLevelProps = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

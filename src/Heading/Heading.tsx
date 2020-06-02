@@ -3,9 +3,7 @@ import styled from "@emotion/styled";
 
 import theme from "../Theme";
 import { Sizes, HeadingLevelProps } from "../util/types";
-import getFontSize from "../util/getFontSize";
-
-export type HeadingSizeProps = "normal";
+import { getHeadingFontSize } from "../util/getFontSize";
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   /**
@@ -50,7 +48,7 @@ const StyledHeading = styled<HeadingLevelProps>("h1", {
 })((props: HeadingProps & { as: any }) => ({
   color: theme.colors.black,
   textAlign: props.centered ? "center" : "left",
-  fontSize: getFontSize(props.level, props.size),
+  fontSize: getHeadingFontSize(props.level, props.size),
   fontWeight: theme.typography.sizes[props.as as HeadingLevelProps].fontWeight,
 }));
 

@@ -2,115 +2,107 @@ import React from "react";
 
 import Heading from "./Heading";
 import Text from "../Text/Text";
+import Divider from "../Divider/Divider";
 
 export default {
   title: "Heading",
   component: Heading,
 };
 
-export const Display1 = (): JSX.Element => (
-  <>
-    <Heading level="h1" size="display1" style={{ display: "none" }}>
-      Display 1
-    </Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+export const Typography = (): JSX.Element => {
+  return (
+    // Temporary padding till I implement Container component
+    <section style={{ paddingRight: "3%", paddingLeft: "3%" }}>
+      <article>
+        <span>Display 1</span>
+        <Heading level="h1" size="display1">
+          Display 1
+        </Heading>
+      </article>
 
-export const Display2 = (): JSX.Element => (
-  <>
-    <Heading level="h1" size="display2">
-      Heading 1
-    </Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <Divider />
 
-export const Display3 = (): JSX.Element => (
-  <>
-    <Heading level="h1" size="display3">
-      Heading 1
-    </Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <article>
+        <span>Display 2</span>
+        <Heading level="h1" size="display2">
+          Display 2
+        </Heading>
+      </article>
 
-export const Heading1 = (): JSX.Element => (
-  <>
-    <Heading level="h1" size={40}>
-      Heading 1
-    </Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <Divider />
 
-export const Heading2 = (): JSX.Element => (
-  <>
-    <Heading level="h2">Heading 2</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <article>
+        <span>Display 3</span>
+        <Heading level="h1" size="display3">
+          Display 3
+        </Heading>
+      </article>
 
-export const Heading3 = (): JSX.Element => (
-  <>
-    <Heading level="h3">Heading 3</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <Divider />
 
-export const Heading4 = (): JSX.Element => (
-  <>
-    <Heading level="h4">Heading 4</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <article>
+        <span>Heading 1</span>
+        <Heading level="h1" size="heading1">
+          Heading 1
+        </Heading>
+      </article>
 
-export const Heading5 = (): JSX.Element => (
-  <>
-    <Heading level="h5">Heading 5</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <Divider />
 
-export const Heading6 = (): JSX.Element => (
-  <>
-    <Heading level="h6">Heading 6</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo
-      sunt enim, aperiam quidem quasi. Repellat soluta delectus optio
-      repudiandae officia, eius magni odit!
-    </Text>
-  </>
-);
+      <article>
+        <span>Heading 2</span>
+        <Heading level="h2" size="heading2">
+          Heading 2
+        </Heading>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Heading 3</span>
+        <Heading level="h3" size="heading3">
+          Heading 3
+        </Heading>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Heading 4</span>
+        <Heading level="h4" size="heading4">
+          Heading 4
+        </Heading>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Heading 5</span>
+        <Heading level="h5" size="heading5">
+          Heading 5
+        </Heading>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Heading 6</span>
+        <Heading level="h6" size="heading6">
+          Heading 6
+        </Heading>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Body</span>
+        <Text>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis, soluta. Expedita, esse dolorem. Ipsa sint tempore
+          excepturi temporibus consequatur nostrum deserunt soluta sunt quia.
+          Illum, nostrum. Expedita nulla aliquid reiciendis?
+        </Text>
+      </article>
+    </section>
+  );
+};

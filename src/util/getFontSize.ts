@@ -7,7 +7,10 @@ import theme from "../Theme";
  * @param level - Desired level of the heading {@see HeadingLevelProps}
  */
 
-const getFontSize = (level: HeadingLevelProps, size?: Sizes): string => {
+export const getHeadingFontSize = (
+  level: HeadingLevelProps,
+  size?: Sizes
+): string => {
   if (typeof size === "number") return `${size}px`;
 
   /**
@@ -19,4 +22,8 @@ const getFontSize = (level: HeadingLevelProps, size?: Sizes): string => {
   return theme.typography.sizes[level].fontSize;
 };
 
-export default getFontSize;
+export const getFontSizeText = (size: Sizes): string => {
+  if (typeof size === "number") return `${size}px`;
+
+  return size === undefined ? "body" : theme.typography.sizes[size].fontSize;
+};
