@@ -55,7 +55,6 @@ const StyledHeading = styled<HeadingLevelProps>("h1", {
 }));
 
 const Heading: FC<HeadingProps> = (props) => {
-  console.log(props);
   const { children, level } = props;
   return (
     <StyledHeading {...props} as={level}>
