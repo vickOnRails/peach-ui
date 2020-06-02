@@ -1,4 +1,4 @@
-import React, { DOMAttributes, FC } from "react";
+import React, { FC, HTMLAttributes } from "react";
 import styled from "@emotion/styled";
 
 import theme from "../Theme";
@@ -7,9 +7,9 @@ import getFontSize from "../util/getFontSize";
 
 export type HeadingSizeProps = "normal";
 
-export interface HeadingProps extends DOMAttributes<HTMLHeadingElement> {
+export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   /**
-   *  level props defines types for the possible types of headings
+   *  level props defines types for the possible types of headings {@see HeadingLevelProps}
    */
   level: HeadingLevelProps;
 
@@ -21,9 +21,7 @@ export interface HeadingProps extends DOMAttributes<HTMLHeadingElement> {
   responsive?: boolean;
 
   /**
-   * Size of the button
-   * FIXME: This doesn't work yet
-   * Can either be "large", "small" , "medium" or CSS rem, em, px etc
+   * The desired size of the Heading {@see Sizes}
    */
   size?: Sizes;
 
@@ -42,23 +40,25 @@ export interface HeadingProps extends DOMAttributes<HTMLHeadingElement> {
  *  FIXME:  Replace `any` with the appropriate type for the styled function
  */
 
-const StyledHeading = styled<any>("h1", {
+const StyledHeading = styled<HeadingLevelProps>("h1", {
   /**
    * Prevent emotion from passing invalid props to native HTML element
    */
-  shouldForwardProp: (props) =>
-    !["as", "responsive", "size", "centered"].includes(props),
-})((props) => ({
+  shouldForwardProp: (prop: string) =>
+    !["as", "responsive", "size", "centered"].includes(prop),
+  // FIXME: Remove any when I find the right type containing the as props
+})((props: HeadingProps & { as: any }) => ({
   color: theme.colors.black,
   textAlign: props.centered ? "center" : "left",
-  fontSize: getFontSize(props.size, props.level),
+  fontSize: getFontSize(props.level, props.size),
   fontWeight: theme.typography.sizes[props.as as HeadingLevelProps].fontWeight,
 }));
 
 const Heading: FC<HeadingProps> = (props) => {
+  console.log(props);
   const { children, level } = props;
   return (
-    <StyledHeading as={level} {...props}>
+    <StyledHeading {...props} as={level}>
       {children}
     </StyledHeading>
   );

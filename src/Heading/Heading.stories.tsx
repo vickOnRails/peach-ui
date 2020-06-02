@@ -10,7 +10,7 @@ export default {
 
 export const Display1 = (): JSX.Element => (
   <>
-    <Heading level="h1" size="display1">
+    <Heading level="h1" size="display1" style={{ display: "none" }}>
       Display 1
     </Heading>
     <Text>
