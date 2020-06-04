@@ -22,8 +22,9 @@ export const getHeadingFontSize = (
   return theme.typography.sizes[level].fontSize;
 };
 
-export const getFontSizeText = (size: Sizes): string => {
+export const getFontSizeText = (size: Sizes | undefined): string => {
   if (typeof size === "number") return `${size}px`;
 
+  // return theme.typography.sizes[size].fontSize;
   return size === undefined ? "body" : theme.typography.sizes[size].fontSize;
 };

@@ -103,6 +103,25 @@ export const Typography = (): JSX.Element => {
           Illum, nostrum. Expedita nulla aliquid reiciendis?
         </Text>
       </article>
+
+      <Divider />
+
+      <article>
+        <span>Small Text</span>
+        <Text size="small">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis, soluta. Expedita, esse dolorem. Ipsa sint tempore
+          excepturi temporibus consequatur nostrum deserunt soluta sunt quia.
+          Illum, nostrum. Expedita nulla aliquid reiciendis?
+        </Text>
+      </article>
+
+      <Divider />
+
+      <article>
+        <span>Caption</span>
+        <Text size="caption">Lorem, ipsum dolor</Text>
+      </article>
     </section>
   );
 };

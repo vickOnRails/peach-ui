@@ -30,6 +30,13 @@ const typography = {
     body: {
       fontSize: "1em",
     },
+    small: {
+      fontSize: "0.87em",
+    },
+    caption: {
+      fontSize: "0.75em",
+      textTransform: "uppercase",
+    },
     h1: {
       fontSize: "2.56em",
       fontWeight: 700,
