@@ -46,7 +46,7 @@ const StyledHeading = styled<HeadingLevelProps>("h1", {
     !["as", "responsive", "size", "centered"].includes(prop),
   // FIXME: Remove any when I find the right type containing the as props
 })((props: HeadingProps & { as: any }) => ({
-  color: theme.colors.black,
+  color: theme.colors.black.base,
   textAlign: props.centered ? "center" : "left",
   fontSize: getHeadingFontSize(props.level, props.size),
   fontWeight: theme.typography.sizes[props.as as HeadingLevelProps].fontWeight,

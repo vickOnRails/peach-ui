@@ -2,7 +2,6 @@ import React, { FC, HTMLAttributes } from "react";
 import { Sizes } from "../util/types";
 import { getFontSizeText } from "../util/getFontSize";
 import styled from "../ThemeProvider/styled";
-import theme from "../Theme";
 
 /**
  *  @param size - Desired size of the text @see {Sizes}

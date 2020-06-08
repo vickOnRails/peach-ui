@@ -14,7 +14,7 @@ export const Typography = (): JSX.Element => {
     // Temporary padding till I implement Container component
     <section style={{ paddingRight: "3%", paddingLeft: "3%" }}>
       <article>
-        <span>Display 1</span>
+        <span>Display 1 (5.9em)</span>
         <Heading level="h1" size="display1">
           Display 1
         </Heading>
@@ -23,7 +23,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Display 2</span>
+        <span>Display 2 (4.75em)</span>
         <Heading level="h1" size="display2">
           Display 2
         </Heading>
@@ -32,7 +32,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Display 3</span>
+        <span>Display 3 (3.8em)</span>
         <Heading level="h1" size="display3">
           Display 3
         </Heading>
@@ -41,7 +41,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Heading 1</span>
+        <span>Heading 1 (2.56em)</span>
         <Heading level="h1" size="heading1">
           Heading 1
         </Heading>
@@ -50,7 +50,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Heading 2</span>
+        <span>Heading 2 (2.44em)</span>
         <Heading level="h2" size="heading2">
           Heading 2
         </Heading>
@@ -59,7 +59,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Heading 3</span>
+        <span>Heading 3 (1.93em)</span>
         <Heading level="h3" size="heading3">
           Heading 3
         </Heading>
@@ -77,7 +77,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Heading 5</span>
+        <span>Heading 5 (1.56em)</span>
         <Heading level="h5" size="heading5">
           Heading 5
         </Heading>
@@ -86,7 +86,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Heading 6</span>
+        <span>Heading 6 (1em)</span>
         <Heading level="h6" size="heading6">
           Heading 6
         </Heading>
@@ -95,7 +95,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Body</span>
+        <span>Body (1em)</span>
         <Text>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Perspiciatis, soluta. Expedita, esse dolorem. Ipsa sint tempore
@@ -107,7 +107,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Small Text</span>
+        <span>Small Text (0.87em)</span>
         <Text size="small">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Perspiciatis, soluta. Expedita, esse dolorem. Ipsa sint tempore
@@ -119,7 +119,7 @@ export const Typography = (): JSX.Element => {
       <Divider />
 
       <article>
-        <span>Caption</span>
+        <span>Caption (0.75em)</span>
         <Text size="caption">Lorem, ipsum dolor</Text>
       </article>
     </section>

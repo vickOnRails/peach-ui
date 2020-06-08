@@ -7,13 +7,13 @@ export default {
   component: Button,
 };
 
-export const Text = (): ReactNode => (
+export const Normal = (): ReactNode => (
   <Button onClick={action("clicked")}>Hello Button</Button>
 );
 
-export const WithStyle = (): ReactNode => (
-  <Button style={{ background: "red", color: "#fff" }}>Red Text</Button>
-);
+// export const WithStyle = (): ReactNode => (
+//   <Button style={{ background: "red", color: "#fff" }}>Red Text</Button>
+// );
 
 export const Disabled = (): ReactNode => (
   <Button disabled>Disabled Button</Button>
