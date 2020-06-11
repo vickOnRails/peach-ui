@@ -11,4 +11,10 @@ const getVariantColor = (variant: VariantProp | undefined): string => {
   return theme.variants[variant].color;
 };
 
-export default getVariantColor;
+const getVariantHoverColor = (variant: VariantProp | undefined): string => {
+  if (variant === undefined) return theme.variants.primary.hover;
+
+  return theme.variants[variant].hover;
+};
+
+export { getVariantHoverColor, getVariantColor };

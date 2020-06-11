@@ -135,7 +135,7 @@ export const CSSReset = () => (
       *,
       *:before,
       *:after {
-        box-sizing: inherit;
+        box-sizing: border-box;
       }
 
       /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */

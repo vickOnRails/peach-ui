@@ -2,6 +2,7 @@ import React from "react";
 
 import Heading from "../Heading/Heading";
 import Text from "./Text";
+import Button from "../Button/Button";
 
 export default {
   title: "Text",
@@ -20,5 +21,12 @@ export const ParagraphText = (): JSX.Element => (
       iste, harum dicta maxime. Labore aliquid commodi veniam nulla sit nemo
       officiis.
     </Text>
+    <Button>Button Text</Button>
+    <Button variant="success">Button Text</Button>
+    <Button variant="warning">Button Text</Button>
+    <Button variant="error">Button Text</Button>
+    <Button variant="error" disabled>
+      Button Text
+    </Button>
   </section>
 );

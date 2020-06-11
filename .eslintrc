@@ -9,11 +9,6 @@
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-    // "ecmaVersion": 2020,
-    // "sourceType": "module",
-    // "ecmaFeatures": {
-    //   "jsx": true
-    // }
     "project": "./tsconfig.json"
   },
   "root": true,
@@ -31,6 +26,8 @@
     "eslint/quotes": 0,
     "react/button-has-type": 0,
     "@typescript-eslint/quotes": ["error", "double"],
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    "indent": "off",
+    "@typescript-eslint/indent": 0
   }
 }

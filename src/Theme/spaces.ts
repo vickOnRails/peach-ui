@@ -1,6 +1,7 @@
 const spaces = {
-  xxs: "2px",
-  xs: "4px",
+  xxxl: "2px",
+  xxs: "4px",
+  xs: "6px",
   sm: "8px",
   md: "16px",
   lg: "32px",

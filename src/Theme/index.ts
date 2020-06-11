@@ -4,6 +4,7 @@ import typography, { Typography } from "./typography";
 import variants, { VariantsProps } from "./variants";
 import spaces, { SpacesProps } from "./spaces";
 import radius, { RadiusProps } from "./radius";
+import shadows, { ShadowProps } from "./shadows";
 
 type ThemeProps = {
   colors: ColorsProps;
@@ -12,6 +13,7 @@ type ThemeProps = {
   variants: VariantsProps;
   spaces: SpacesProps;
   radius: RadiusProps;
+  shadows: ShadowProps;
 };
 
 const theme: ThemeProps = {
@@ -21,6 +23,7 @@ const theme: ThemeProps = {
   variants,
   spaces,
   radius,
+  shadows,
 };
 
 export default theme;

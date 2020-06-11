@@ -5,4 +5,5 @@ import { VariantProp } from "../../Theme/variants";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   htmlType?: "button" | "submit" | "reset";
   variant?: VariantProp;
+  variantStyle?: "outline" | "fill" | "ghost";
 }
