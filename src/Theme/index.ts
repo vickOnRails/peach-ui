@@ -2,12 +2,16 @@ import colors, { ColorsProps } from "./colors";
 import breakpoints, { BreakpointsProps } from "./breakpoints";
 import typography, { Typography } from "./typography";
 import variants, { VariantsProps } from "./variants";
+import spaces, { SpacesProps } from "./spaces";
+import radius, { RadiusProps } from "./radius";
 
 type ThemeProps = {
   colors: ColorsProps;
   breakpoints: BreakpointsProps;
   typography: Typography;
   variants: VariantsProps;
+  spaces: SpacesProps;
+  radius: RadiusProps;
 };
 
 const theme: ThemeProps = {
@@ -15,6 +19,8 @@ const theme: ThemeProps = {
   breakpoints,
   typography,
   variants,
+  spaces,
+  radius,
 };
 
 export default theme;

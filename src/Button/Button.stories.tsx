@@ -1,12 +1,6 @@
-import React, { ReactNode, ButtonHTMLAttributes } from "react";
+import React, { ReactNode } from "react";
 import { action } from "@storybook/addon-actions";
 import Button from "./Button";
-import { VariantProp } from "../Theme/variants";
-
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  htmlType?: "button" | "submit" | "reset";
-  variant?: VariantProp;
-}
 
 export default {
   title: "Button",
