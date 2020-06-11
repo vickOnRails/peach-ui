@@ -34,6 +34,7 @@ const colors = {
     lighter: "#C7C7C7",
     lightest: "#FAFAFA",
   },
+  white: "#ffffff",
 };
 
 export type ColorsProps = typeof colors;

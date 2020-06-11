@@ -1,6 +1,12 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, ButtonHTMLAttributes } from "react";
 import { action } from "@storybook/addon-actions";
 import Button from "./Button";
+import { VariantProp } from "../Theme/variants";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  htmlType?: "button" | "submit" | "reset";
+  variant?: VariantProp;
+}
 
 export default {
   title: "Button",
@@ -8,7 +14,9 @@ export default {
 };
 
 export const Normal = (): ReactNode => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
+  <Button variant="primary" onClick={action("clicked")}>
+    Hello Button
+  </Button>
 );
 
 // export const WithStyle = (): ReactNode => (

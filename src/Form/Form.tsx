@@ -7,7 +7,7 @@ const Form: FC<FormProps> = ({ children, ...rest }) => {
   return (
     <form {...rest}>
       {children}
-      <Button>Submit</Button>
+      <Button variant="primary">Submit</Button>
     </form>
   );
 };

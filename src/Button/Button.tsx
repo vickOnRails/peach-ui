@@ -1,18 +1,16 @@
-import React, { FC, ButtonHTMLAttributes } from "react";
+import React, { FC } from "react";
+import StyledButton from "./ButtonStyles";
+import { ButtonProps } from "./types/ButtonTypes";
 
-type Variant = "primary" | "secondary" | "error" | "success" | "info";
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  type?: "button" | "submit" | "reset";
-
-  // variant: Variant;
-  // filled: boolean;
-}
-
-const Button: FC<ButtonProps> = ({ children, type = "submit", ...rest }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  htmlType = "submit",
+  ...rest
+}) => {
   return (
-    <button type={type} {...rest}>
+    <StyledButton type={htmlType} {...rest}>
       {children}
-    </button>
+    </StyledButton>
   );
 };
 
