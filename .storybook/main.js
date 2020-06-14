@@ -5,6 +5,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/preset-typescript",
     "@storybook/addon-storysource",
-    "@storybook/addon-docs",
+    // "@storybook/addon-docs",
   ],
 };

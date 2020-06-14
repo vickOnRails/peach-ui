@@ -1,12 +1,15 @@
 import theme from "../Theme";
 import { VariantProp } from "../Theme/variants";
+import { VariantStyle } from "../Button/types/Button.types";
 
-/**
- * Returns color of variant
- */
-
-const getVariantColor = (variant: VariantProp | undefined): string => {
+const getVariantColor = (
+  variant: VariantProp | undefined,
+  variantStyle: VariantStyle | undefined
+): string => {
   if (variant === undefined) return theme.variants.primary.color;
+
+  if (["ghost", "outline"].includes(variantStyle as string))
+    return "transparent";
 
   return theme.variants[variant].color;
 };
