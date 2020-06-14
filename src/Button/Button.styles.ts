@@ -84,6 +84,28 @@ const StyledButtonGhost = ({
     }
   `;
 
+const StyledButtonLoading = ({
+  loading,
+  variant,
+}: ButtonProps): SerializedStyles | false | undefined =>
+  loading &&
+  css`
+    background-color: ${variant
+      ? theme.variants[variant].hover
+      : theme.variants.primary.hover};
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      transform: none;
+      cursor: initial;
+      background-color: ${variant
+        ? theme.variants[variant].hover
+        : theme.variants.primary.hover};
+    }
+  `;
+
 const StyledButtonDisabled = ({
   disabled,
 }: ButtonProps): SerializedStyles | false | undefined =>
@@ -106,7 +128,8 @@ const StyledButton = styled.button<ButtonProps>`
   ${StyledButtonDefault};
   ${StyledButtonOutline};
   ${StyledButtonGhost};
-  ${StyledButtonDisabled}
+  ${StyledButtonLoading};
+  ${StyledButtonDisabled};
 `;
 
 export default StyledButton;

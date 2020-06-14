@@ -32,3 +32,18 @@ export const VariantStyles = (): ReactNode => (
     </Button>
   </section>
 );
+
+export const Loading = (): ReactNode => (
+  <>
+    <Button loading> Content is Loading</Button>
+    <Button variant="error" loading>
+      Content is Loading
+    </Button>
+    <Button variant="success" loading>
+      Content is Loading
+    </Button>
+    <Button variant="warning" loading>
+      Content is Loading
+    </Button>
+  </>
+);
