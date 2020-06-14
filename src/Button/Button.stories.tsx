@@ -21,19 +21,13 @@ export const Variants = (): ReactNode => (
 
 export const VariantStyles = (): ReactNode => (
   <section style={{ margin: "1em" }}>
-    <Button variant="primary" variantStyle="outline">
-      Variant Styles
-    </Button>
-    <Button variant="success" variantStyle="ghost">
-      Variant Styles
-    </Button>
-    <Button variant="warning" variantStyle="filled">
+    <Button variant="success" variantStyle="outline">
       Variant Styles
     </Button>
     <Button variant="error" variantStyle="ghost">
       Variant Styles
     </Button>
-    <Button variant="warning" disabled variantStyle="filled">
+    <Button variant="success" variantStyle="filled">
       Variant Styles
     </Button>
   </section>

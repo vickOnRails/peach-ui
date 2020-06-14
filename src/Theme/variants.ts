@@ -23,7 +23,7 @@ const variants = {
   },
   warning: {
     color: colors.yellow[800],
-    hover: colors.yellow[900],
+    hover: colors.yellow[700],
     text: colors.grey[900],
   },
 };

@@ -20,4 +20,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    * Appearance of the Button. Either of "outline" | "filled" | "ghost"
    */
   variantStyle?: VariantStyle;
+
+  /**
+   * Set button loading state
+   */
+  loading?: boolean;
 }
