@@ -25,4 +25,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    * Set button loading state
    */
   loading?: boolean;
+
+  /**
+   *  If set to true, button will be full width
+   */
+  block?: boolean;
 }

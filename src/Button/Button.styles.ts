@@ -23,7 +23,10 @@ const getDefaultVariant = (
     : theme.variants.primary.color;
 };
 
-const StyledButtonDefault = ({ variant }: ButtonProps): SerializedStyles => css`
+const StyledButtonDefault = ({
+  variant,
+  block,
+}: ButtonProps): SerializedStyles => css`
   background-color: ${getDefaultVariant(variant)};
   color: ${variant === "warning"
     ? theme.variants[variant].text
@@ -32,6 +35,7 @@ const StyledButtonDefault = ({ variant }: ButtonProps): SerializedStyles => css`
   padding: ${`${theme.spaces.xs} ${theme.spaces.md}`};
   border-radius: ${theme.radius.xs};
   transition: all 0.25s;
+  width: ${block ? "100%" : "auto"};
 
   &:hover {
     background-color: ${getDefaultVariant(variant, "hover")};

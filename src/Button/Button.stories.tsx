@@ -47,3 +47,18 @@ export const Loading = (): ReactNode => (
     </Button>
   </>
 );
+
+export const Block = (): ReactNode => (
+  <>
+    <Button block>Content is Loading</Button>
+    <Button variant="error" block>
+      Content is Loading
+    </Button>
+    <Button variant="success" block>
+      Content is Loading
+    </Button>
+    <Button variant="warning" block>
+      Content is Loading
+    </Button>
+  </>
+);
