@@ -1,3 +1,4 @@
+// https://5ccbc373887ca40020446347-frgogtvejg.chromatic.com/?path=/docs/design-system-avatar--basic
 const colors = {
   blue: {
     900: "#0d47a1",

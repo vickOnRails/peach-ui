@@ -10,7 +10,6 @@ export default {
 };
 
 export const ParagraphText = (): JSX.Element => (
-  // Temporary padding till I make the Container component
   <section style={{ paddingLeft: "3%", paddingRight: "3%" }}>
     <Heading level="h1" size="display1" centered>
       Heading Text

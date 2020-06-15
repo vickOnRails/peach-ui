@@ -7,7 +7,7 @@ import styled from "../ThemeProvider/styled";
  *  @param size - Desired size of the text @see {Sizes}
  *  @param centered - Text will be centered when set to true
  */
-interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: Sizes;
   centered?: boolean;
 }

@@ -5,6 +5,7 @@ import { CSSReset } from "../src/CSSReset";
 import ThemeProvider, {
   ThemeProviderProps,
 } from "../src/ThemeProvider/ThemeProvider";
+import styled from "@emotion/styled";
 
 // App theme
 const theme = {
@@ -21,7 +22,19 @@ export const Provider: FC<ThemeProviderProps> = (props) => {
   );
 };
 
+const StorybookWrapper = ({ children }) => (
+  <StyledStorybookWrapper>{children}</StyledStorybookWrapper>
+);
+
+const StyledStorybookWrapper = styled.section`
+  max-width: 50em;
+  padding: 1em;
+  margin: 0 auto;
+`;
+
 // Wrap all stories in a themeContext
 addDecorator((StoryFn: Function) => (
-  <Provider theme={theme}>{StoryFn()}</Provider>
+  <StorybookWrapper>
+    <Provider theme={theme}>{StoryFn()}</Provider>
+  </StorybookWrapper>
 ));

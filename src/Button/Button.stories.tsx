@@ -10,17 +10,17 @@ export default {
 export const Basic = (): ReactNode => <Button>Hello Button</Button>;
 
 export const Variants = (): ReactNode => (
-  <section style={{ margin: "1em" }}>
+  <>
     <Button variant="primary">Disabled Button</Button>
     <Button variant="success">Disabled Button</Button>
     <Button variant="error">Disabled Button</Button>
     <Button variant="warning">Disabled Button</Button>
     <Button disabled>Disabled Button</Button>
-  </section>
+  </>
 );
 
 export const VariantStyles = (): ReactNode => (
-  <section style={{ margin: "1em" }}>
+  <>
     <Button variant="success" variantStyle="outline">
       Variant Styles
     </Button>
@@ -30,7 +30,7 @@ export const VariantStyles = (): ReactNode => (
     <Button variant="success" variantStyle="filled">
       Variant Styles
     </Button>
-  </section>
+  </>
 );
 
 export const Loading = (): ReactNode => (

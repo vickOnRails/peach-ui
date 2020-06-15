@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { CSSReset } from "../src/CSSReset";
 
-const FrameComponent = ({ children }: { children: ReactNode }): ReactNode => (
+const FrameComponent = ({ children }) => (
   <>
     <CSSReset />
     {children}

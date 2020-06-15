@@ -31,11 +31,12 @@ const StyledButtonDefault = ({
   color: ${variant === "warning"
     ? theme.variants[variant].text
     : theme.colors.white};
+
   border: none;
   padding: ${`${theme.spaces.xs} ${theme.spaces.md}`};
-  border-radius: ${theme.radius.xs};
   transition: all 0.25s;
   width: ${block ? "100%" : "auto"};
+  font-size: 1em;
 
   &:hover {
     background-color: ${getDefaultVariant(variant, "hover")};
