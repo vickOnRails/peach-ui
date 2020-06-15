@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/core";
 import theme from "../Theme";
-import { ButtonProps } from "./types/Button.types";
+import { ButtonProps, ButtonSizeProp } from "./types/Button.types";
 import { VariantProp } from "../Theme/variants";
 
 /**
@@ -23,8 +23,18 @@ const getDefaultVariant = (
     : theme.variants.primary.color;
 };
 
+const getButtonSize = (size: ButtonSizeProp | undefined): string => {
+  if (size === undefined || size === "medium")
+    return `${theme.spaces.xs} ${theme.spaces.md}`;
+
+  if (size === "small") return `${theme.spaces.xxs} ${theme.spaces.sm}`;
+
+  return `${theme.spaces.sm} ${theme.spaces.lg}`;
+};
+
 const StyledButtonDefault = ({
   variant,
+  size,
   block,
 }: ButtonProps): SerializedStyles => css`
   background-color: ${getDefaultVariant(variant)};
@@ -33,10 +43,12 @@ const StyledButtonDefault = ({
     : theme.colors.white};
 
   border: none;
-  padding: ${`${theme.spaces.xs} ${theme.spaces.md}`};
+  padding: ${getButtonSize(size)};
   transition: all 0.25s;
   width: ${block ? "100%" : "auto"};
-  font-size: 1em;
+  font-size: ${size === "small"
+    ? theme.typography.sizes.small.fontSize
+    : theme.typography.sizes.body.fontSize};
 
   &:hover {
     background-color: ${getDefaultVariant(variant, "hover")};

@@ -9,25 +9,49 @@ export default {
 
 export const Basic = (): ReactNode => <Button>Hello Button</Button>;
 
+export const Sizes = (): ReactNode => (
+  <>
+    <Button size="small" style={{ margin: ".5em" }}>
+      Small Button
+    </Button>
+    <Button size="medium" style={{ margin: ".5em" }}>
+      Medium Button
+    </Button>
+    <Button size="large" style={{ margin: ".5em" }}>
+      Large Button
+    </Button>
+  </>
+);
+
 export const Variants = (): ReactNode => (
   <>
-    <Button variant="primary">Disabled Button</Button>
-    <Button variant="success">Disabled Button</Button>
-    <Button variant="error">Disabled Button</Button>
-    <Button variant="warning">Disabled Button</Button>
-    <Button disabled>Disabled Button</Button>
+    <Button variant="primary" style={{ margin: ".5em" }}>
+      Disabled Button
+    </Button>
+    <Button variant="success" style={{ margin: ".5em" }}>
+      Disabled Button
+    </Button>
+    <Button variant="error" style={{ margin: ".5em" }}>
+      Disabled Button
+    </Button>
+    <Button variant="warning" style={{ margin: ".5em" }}>
+      Disabled Button
+    </Button>
+    <Button disabled style={{ margin: ".5em" }}>
+      Disabled Button
+    </Button>
   </>
 );
 
 export const VariantStyles = (): ReactNode => (
   <>
-    <Button variant="success" variantStyle="outline">
+    <Button variant="success" variantStyle="outline" style={{ margin: ".5em" }}>
       Variant Styles
     </Button>
-    <Button variant="error" variantStyle="ghost">
+    <Button variant="error" variantStyle="ghost" style={{ margin: ".5em" }}>
       Variant Styles
     </Button>
-    <Button variant="success" variantStyle="filled">
+    <Button variant="success" variantStyle="filled" style={{ margin: ".5em" }}>
       Variant Styles
     </Button>
   </>
@@ -35,14 +59,17 @@ export const VariantStyles = (): ReactNode => (
 
 export const Loading = (): ReactNode => (
   <>
-    <Button loading> Content is Loading</Button>
-    <Button variant="error" loading>
+    <Button loading style={{ margin: ".5em" }}>
+      {" "}
       Content is Loading
     </Button>
-    <Button variant="success" loading>
+    <Button variant="error" loading style={{ margin: ".5em" }}>
       Content is Loading
     </Button>
-    <Button variant="warning" loading>
+    <Button variant="success" loading style={{ margin: ".5em" }}>
+      Content is Loading
+    </Button>
+    <Button variant="warning" loading style={{ margin: ".5em" }}>
       Content is Loading
     </Button>
   </>
@@ -50,14 +77,16 @@ export const Loading = (): ReactNode => (
 
 export const Block = (): ReactNode => (
   <>
-    <Button block>Content is Loading</Button>
-    <Button variant="error" block>
+    <Button block style={{ marginBottom: ".5em" }}>
       Content is Loading
     </Button>
-    <Button variant="success" block>
+    <Button variant="error" block style={{ marginBottom: ".5em" }}>
       Content is Loading
     </Button>
-    <Button variant="warning" block>
+    <Button variant="success" block style={{ marginBottom: ".5em" }}>
+      Content is Loading
+    </Button>
+    <Button variant="warning" block style={{ marginBottom: ".5em" }}>
       Content is Loading
     </Button>
   </>

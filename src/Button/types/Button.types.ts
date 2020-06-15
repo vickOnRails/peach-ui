@@ -5,14 +5,16 @@ import { VariantProp } from "../../Theme/variants";
 export type VariantStyle = "outline" | "filled" | "ghost";
 export type TypeProp = "button" | "submit" | "reset";
 
+export type ButtonSizeProp = "small" | "medium" | "large";
+type BordersProps = "rounded" | "squared" | "circled";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * `type` of Button. Either of "button" | "submit" | "reset"
+   * Sets the `type` of Button. Either of "button" | "submit" | "reset"
    */
   type?: TypeProp;
 
   /**
-   * Set the variant of the Button. @see VariantProp
+   * Sets the variant of the Button. @see VariantProp
    */
   variant?: VariantProp;
 
@@ -22,12 +24,22 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variantStyle?: VariantStyle;
 
   /**
-   * Set button loading state
+   * Set Button loading state
    */
   loading?: boolean;
 
   /**
-   *  If set to true, button will be full width
+   *  If set to `true`, Button will be full width
    */
   block?: boolean;
+
+  /**
+   * Sets the size of the Button
+   */
+  size?: ButtonSizeProp;
+
+  /**
+   *  Sets the border radius of the Button
+   */
+  borders?: BordersProps;
 }
