@@ -6,7 +6,7 @@ export type VariantStyle = "outline" | "filled" | "ghost";
 export type TypeProp = "button" | "submit" | "reset";
 
 export type ButtonSizeProp = "small" | "medium" | "large";
-type BordersProps = "rounded" | "squared" | "circled";
+export type BordersProps = "rounded" | "squared" | "circled";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Sets the `type` of Button. Either of "button" | "submit" | "reset"

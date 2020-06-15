@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-// import { action } from "@storybook/addon-actions";
 import Button from "./Button";
 
 export default {
@@ -26,16 +25,16 @@ export const Sizes = (): ReactNode => (
 export const Variants = (): ReactNode => (
   <>
     <Button variant="primary" style={{ margin: ".5em" }}>
-      Disabled Button
+      Primary Button
     </Button>
     <Button variant="success" style={{ margin: ".5em" }}>
-      Disabled Button
+      Success Button
     </Button>
     <Button variant="error" style={{ margin: ".5em" }}>
-      Disabled Button
+      Error Button
     </Button>
     <Button variant="warning" style={{ margin: ".5em" }}>
-      Disabled Button
+      Warning Button
     </Button>
     <Button disabled style={{ margin: ".5em" }}>
       Disabled Button
@@ -45,22 +44,35 @@ export const Variants = (): ReactNode => (
 
 export const VariantStyles = (): ReactNode => (
   <>
-    <Button variant="success" variantStyle="outline" style={{ margin: ".5em" }}>
-      Variant Styles
+    <Button variantStyle="ghost" style={{ margin: ".5em" }}>
+      Filled Button
     </Button>
-    <Button variant="error" variantStyle="ghost" style={{ margin: ".5em" }}>
-      Variant Styles
+    <Button variantStyle="outline" style={{ margin: ".5em" }}>
+      Outline Button
     </Button>
-    <Button variant="success" variantStyle="filled" style={{ margin: ".5em" }}>
-      Variant Styles
+    <Button variantStyle="filled" style={{ margin: ".5em" }}>
+      Ghost Button
+    </Button>
+  </>
+);
+
+export const BorderRadius = (): ReactNode => (
+  <>
+    <Button borders="squared" style={{ margin: ".5em" }}>
+      Squared Button
+    </Button>
+    <Button borders="rounded" style={{ margin: ".5em" }}>
+      Rounded Button
+    </Button>
+    <Button borders="circled" variantStyle="ghost" style={{ margin: ".5em" }}>
+      Circled Button
     </Button>
   </>
 );
 
 export const Loading = (): ReactNode => (
   <>
-    <Button loading style={{ margin: ".5em" }}>
-      {" "}
+    <Button loading borders="rounded" style={{ margin: ".5em" }}>
       Content is Loading
     </Button>
     <Button variant="error" loading style={{ margin: ".5em" }}>

@@ -4,7 +4,10 @@ const radius = {
   md: "16px",
   lg: "32px",
   xl: "64px",
-  round: "100%",
+  // FIXME: Change to a relative value for rounded as soon as possible
+  circled: "100px",
+  squared: "0",
+  rounded: "4px",
 };
 
 export type RadiusProps = typeof radius;

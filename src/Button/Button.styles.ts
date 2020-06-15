@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/core";
 import theme from "../Theme";
-import { ButtonProps, ButtonSizeProp } from "./types/Button.types";
+import {
+  ButtonProps,
+  ButtonSizeProp,
+  BordersProps,
+} from "./types/Button.types";
 import { VariantProp } from "../Theme/variants";
 
 /**
@@ -32,9 +36,17 @@ const getButtonSize = (size: ButtonSizeProp | undefined): string => {
   return `${theme.spaces.sm} ${theme.spaces.lg}`;
 };
 
+// Move to /util if another component wants it
+const getBorderRadius = (borders: BordersProps | undefined): string => {
+  if (borders === undefined) return theme.radius.squared;
+
+  return theme.radius[borders];
+};
+
 const StyledButtonDefault = ({
   variant,
   size,
+  borders,
   block,
 }: ButtonProps): SerializedStyles => css`
   background-color: ${getDefaultVariant(variant)};
@@ -49,6 +61,8 @@ const StyledButtonDefault = ({
   font-size: ${size === "small"
     ? theme.typography.sizes.small.fontSize
     : theme.typography.sizes.body.fontSize};
+
+  border-radius: ${getBorderRadius(borders)};
 
   &:hover {
     background-color: ${getDefaultVariant(variant, "hover")};
@@ -87,11 +101,11 @@ const StyledButtonGhost = ({
   css`
     background: inherit;
     color: ${getDefaultVariant(variant)};
-    border: ${`1px solid ${theme.colors.grey[300]}`};
+    border: ${`2px solid ${theme.colors.grey[300]}`};
 
     &:hover {
       background: inherit;
-      border: ${`1px solid ${getDefaultVariant(variant)}`};
+      border: ${`2px solid ${getDefaultVariant(variant)}`};
       box-shadow: none;
     }
 
