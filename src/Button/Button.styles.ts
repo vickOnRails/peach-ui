@@ -47,12 +47,15 @@ const StyledButtonDefault = ({
   variant,
   size,
   borders,
+  loading,
   block,
 }: ButtonProps): SerializedStyles => css`
   background-color: ${getDefaultVariant(variant)};
   color: ${variant === "warning"
     ? theme.variants[variant].text
     : theme.colors.white};
+
+  line-height: ${loading ? "0" : "inherit"};
 
   border: none;
   padding: ${getButtonSize(size)};

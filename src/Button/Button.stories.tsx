@@ -72,7 +72,7 @@ export const BorderRadius = (): ReactNode => (
 
 export const Loading = (): ReactNode => (
   <>
-    <Button loading borders="rounded" style={{ margin: ".5em" }}>
+    <Button loading borders="rounded" size="small" style={{ margin: ".5em" }}>
       Content is Loading
     </Button>
     <Button variant="error" loading style={{ margin: ".5em" }}>
