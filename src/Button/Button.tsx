@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import StyledButton from "./Button.styles";
 import { ButtonProps } from "./types/Button.types";
-import Spinner from "../Spinner/Spinner";
+// import Spinner from "../Spinner/Spinner";
 
 const Button: FC<ButtonProps> = ({
   children,
@@ -11,15 +11,8 @@ const Button: FC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <StyledButton type={type} {...rest} loading={loading}>
-      {loading ? (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Spinner />
-          {children}
-        </div>
-      ) : (
-        children
-      )}
+    <StyledButton {...rest} type={type} loading={loading}>
+      {loading ? <p>Loading...</p> : children}
     </StyledButton>
   );
 };

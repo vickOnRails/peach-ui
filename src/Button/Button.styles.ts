@@ -51,19 +51,21 @@ const StyledButtonDefault = ({
   block,
 }: ButtonProps): SerializedStyles => css`
   background-color: ${getDefaultVariant(variant)};
-  color: ${variant === "warning"
-    ? theme.variants[variant].text
-    : theme.colors.white};
+  color: ${
+    variant === "warning" ? theme.variants[variant].text : theme.colors.white
+  };
 
-  line-height: ${loading ? "0" : "inherit"};
+  /* line-height: ${loading ? "0" : "inherit"}; */
 
   border: none;
   padding: ${getButtonSize(size)};
   transition: all 0.25s;
   width: ${block ? "100%" : "auto"};
-  font-size: ${size === "small"
-    ? theme.typography.sizes.small.fontSize
-    : theme.typography.sizes.body.fontSize};
+  font-size: ${
+    size === "small"
+      ? theme.typography.sizes.small.fontSize
+      : theme.typography.sizes.body.fontSize
+  };
 
   border-radius: ${getBorderRadius(borders)};
 
