@@ -1,54 +1,44 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
+import styled from "@emotion/styled";
 
-const rotate = keyframes`
-0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
+import "./Spinner.css";
 
-const StyledSpinner = styled.div`
-  display: inline-block;
-  position: relative;
-  width: 30px;
-  height: 30px;
-`;
+const spinnerSize = 35;
 
-const StyledChild = styled.div`
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin: 3px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  animation: ${rotate} 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
+const spinner = keyframes`
+  0% {
+      stroke-dashoffset: ${0.66 * spinnerSize};
+      transform: rotate(0deg);
+  } 50% {
+      stroke-dashoffset: ${3.14 * spinnerSize};
+      transform: rotate(400deg);
+  } 100% {
+      stroke-dashoffset: ${0.66 * spinnerSize};
+      transform: rotate(950deg);
+  }`;
 
-  &::first-child {
-    animation-delay: -0.4s;
-  }
+const StyledSpinner = styled.svg`
+  width: ${spinnerSize}px;
+  height: ${spinnerSize}px;
+  x: 0px;
+  y: 0px;
+  viewbox: 0 0 ${spinnerSize} ${spinnerSize};
 
-  &::nth-child(2) {
-    animation-delay: -0.25s;
-  }
-  &:last-child(3) {
-    animation-delay: -0.1s;
+  circle {
+    fill: transparent;
+    stroke: #212121;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: ${3.14 * spinnerSize};
+    animation: ${spinner} 2s linear infinite;
+    transform-origin: ${0.5 * spinnerSize}px ${0.5 * spinnerSize}px 0;
   }
 `;
 
-// FIXME: Make Spinner a more robust component with it's __tests__ styled etc.
-const Spinner = (): JSX.Element => (
-  <StyledSpinner>
-    <StyledChild />
-    <StyledChild />
-    <StyledChild />
-    <StyledChild />
+const Spinner = () => (
+  <StyledSpinner viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="18" className="circle" />
   </StyledSpinner>
 );
 

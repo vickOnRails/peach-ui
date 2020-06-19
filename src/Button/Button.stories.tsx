@@ -44,13 +44,13 @@ export const Variants = (): ReactNode => (
 
 export const VariantStyles = (): ReactNode => (
   <>
-    <Button variantStyle="ghost" style={{ margin: ".5em" }}>
+    <Button variantStyle="ghost" variant="warning" style={{ margin: ".5em" }}>
       Filled Button
     </Button>
-    <Button variantStyle="outline" style={{ margin: ".5em" }}>
+    <Button variantStyle="outline" variant="warning" style={{ margin: ".5em" }}>
       Outline Button
     </Button>
-    <Button variantStyle="filled" style={{ margin: ".5em" }}>
+    <Button variantStyle="filled" variant="warning" style={{ margin: ".5em" }}>
       Ghost Button
     </Button>
   </>
