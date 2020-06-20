@@ -1,0 +1,77 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import Heading from "./Heading.tsx";
+import Divider from "../Divider/Divider.tsx";
+
+<Meta title="Heading" component={Heading} />
+
+# Heading
+
+Renders a Heading to the screen
+
+<Preview>
+<Story name="Basic">
+  <Heading level="h1" size="display1">Display 1</Heading>
+</Story>
+</Preview>
+
+## Quick Usage
+The fastest way to use the `Heading` component is to add the required `level` props. 
+The `Heading` component can take any of the levels `h1` | `h2` | `h3` | `h4` | `h5` | `h6`. 
+
+### level
+Set the `level` of the `Heading` by passing the appropriate heading level
+
+<Preview>
+<Story name="Levels">
+  <>
+    <Heading level="h1">Heading 1</Heading>
+    <Divider/>
+    <Heading level="h2">Heading 2</Heading>
+    <Divider/>
+    <Heading level="h3">Heading 3</Heading>
+    <Divider/>
+    <Heading level="h4">Heading 4</Heading>
+    <Divider/>
+    <Heading level="h5">Heading 5</Heading>
+    <Divider/>
+    <Heading level="h6">Heading 6</Heading>
+  </>
+</Story>
+</Preview>
+
+### size
+You can also control the size of the `Heading` by customizing the `size` prop irrespective of the heading `level`. 
+This is useful in cases where you want a `h6` to appear large.
+
+<Preview>
+<Story name="Sizes">
+<>
+  <Heading level="h1" size="display1">Display 1</Heading>
+  <Divider/>
+  <Heading level="h1" size="display2">Display 2</Heading>
+  <Divider/>
+  <Heading level="h1" size="display3">Display 3</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading1">Heading 1</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading2">Heading 2</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading3">Heading 3</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading4">Heading 4</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading5">Heading 5</Heading>
+  <Divider/>
+  <Heading level="h1" size="heading6">Heading 6</Heading>
+</>
+</Story>
+</Preview>
+
+### Centered Heading
+Setting the `centered` prop to `true` centers the heading.
+
+<Preview>
+  <Story name="Centered">
+    <Heading level="h1" centered>Heading</Heading>
+  </Story>
+</Preview>
