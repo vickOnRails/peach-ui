@@ -27,8 +27,8 @@ const StorybookWrapper = ({ children }) => (
 );
 
 const StyledStorybookWrapper = styled.section`
-  max-width: 50em;
-  padding: 1em;
+  max-width: 60em;
+  padding: 1em 0.5em;
   margin: 0 auto;
 `;
 

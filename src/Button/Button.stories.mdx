@@ -1,0 +1,115 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import Button from "./Button.tsx";
+
+<Meta title="Button" component={Button} />
+
+# Button
+
+Enable users trigger actions or events
+
+<Preview>
+  <Story name="Basic">
+    <Button>Simple Button</Button>
+  </Story>
+</Preview>
+
+## Usage
+The quickest way to use the `Button` is to pass the text to render as child node of the `Button`. You can further customize it with the available props
+
+### Size
+Customize the size of the `Button` by using either of `small` | `normal` | `large` 
+<Preview>
+    <Story name="Sizes">
+    <>
+        <Button size="small" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Small Button</Button>
+        <Button size="medium" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Medium Button</Button>
+        <Button size="large" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Large Button</Button>
+    </>
+    </Story>
+</Preview>
+
+
+### Variants
+Define the context/variant of the `Button` by passing a value to the `variant` prop. Value can be any of `primary`, `success`, `error`, `warning` & `info`
+
+<Preview>
+<Story name="Variant">
+    <>
+        <Button variant="primary" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Primary Button</Button>
+        <Button variant="success" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Success Button</Button>
+        <Button variant="error" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Error Button</Button>
+        <Button variant="warning" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Warning Button</Button>
+        <Button variant="info" style={{ marginRight: ".5em", marginBottom: '.5em' }}>Warning Button</Button>
+        <Button disabled style={{ marginRight: ".5em", marginBottom: '.5em' }}>Disabled Button</Button>
+    </>
+</Story>
+</Preview>
+
+### Variant Styles
+Customize the appearance of the `Button` by passing a `variantStyle` prop. Value can be any of `filled`, `outline` or `ghost`
+
+<Preview>
+    <Story name="Variant Styles">
+        <>
+            <Button variantStyle="ghost" style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Filled Button
+            </Button>
+            <Button variantStyle="outline" style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Outline Button
+            </Button>
+            <Button variantStyle="filled" style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Ghost Button
+            </Button>
+        </>
+    </Story>
+</Preview>
+
+### Border Radius
+The `radius` prop can be used to customize the edges of the `Button`. Value can be any of `squared`, `rounded` and `circled`
+
+<Preview>
+    <Story name="Border Radius">
+        <>
+            <Button borders="squared" style={{ margin: ".5em" }}>
+            Squared Button
+            </Button>
+            <Button borders="rounded" style={{ margin: ".5em" }}>
+            Rounded Button
+            </Button>
+            <Button borders="circled" variantStyle="ghost" style={{ margin: ".5em" }}>
+            Circled Button
+            </Button>
+        </>
+    </Story>
+</Preview>
+
+### Loading
+Set the `loading` prop to `true` to activate loading button Styles
+
+<Preview>
+    <Story name="Loading">
+        <Button loading={true}>Loading</Button>
+    </Story>
+</Preview>
+
+### Block
+Setting the `block` prop to true gives you a `Button` that spans the entire row
+
+<Preview>
+    <Story name="Block">
+        <>
+            <Button block style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Content is Loading
+            </Button>
+            <Button variant="error" block style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Content is Loading
+            </Button>
+            <Button variant="success" block style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Content is Loading
+            </Button>
+            <Button variant="warning" block style={{ marginRight: ".5em", marginBottom: '.5em' }}>
+            Content is Loading
+            </Button>
+        </>
+    </Story>
+</Preview>
