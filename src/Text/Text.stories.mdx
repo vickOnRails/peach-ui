@@ -1,0 +1,73 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import Text from "./Text.tsx";
+import Divider from '../Divider/Divider.tsx'
+
+<Meta title="Text" component={Text} />
+
+# Text
+
+Renders paragraph text (`p`) to the screen
+
+<Preview>
+  <Story name="Basic">
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+      laudantium asperiores hic vel deserunt, tenetur voluptatum libero cum
+      iste, harum dicta maxime. Labore aliquid commodi veniam nulla sit nemo
+      officiis.
+    </Text>
+  </Story>
+</Preview>
+
+## Quick Usage
+
+The easiest way to get text on the screen is to use the `<Text/>` component
+
+## size
+
+Use the `size` prop to customize the size of the `Text`. Values include
+
+<Preview>
+  <Story name="Sizes">
+    <>
+      <Text size="display1" >Display 1</Text>
+      <Divider/>
+      <Text size="display2">Display 2</Text>
+      <Divider/>
+      <Text size="display3">Display 3</Text>
+      <Divider/>
+      <Text size="heading1">Heading 1</Text>
+      <Divider/>
+      <Text size="heading2">Heading 2</Text>
+      <Divider/>
+      <Text size="heading3">Heading 3</Text>
+      <Divider/>
+      <Text size="heading4">Heading 4</Text>
+      <Divider/>
+      <Text size="heading5">Heading 5</Text>
+      <Divider/>
+      <Text size="heading6">Heading 6</Text>
+      <Divider/>
+      <Text size="body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+        laudantium asperiores hic vel deserunt, tenetur voluptatum libero cum
+        iste, harum dicta maxime. Labore aliquid commodi veniam nulla sit nemo
+        officiis.
+      </Text>
+      <Divider/>
+      <Text size="caption">Caption</Text>
+      <Divider/>
+      <Text size="small">Small</Text>
+    </>
+  </Story>
+</Preview>
+
+
+## Centered Text
+Pull a `Text` paragraph to the center by setting the `centered` prop to `true`
+
+<Preview>
+  <Story name="Centered">
+     <Text centered>Centered Text</Text>
+  </Story>
+</Preview>
