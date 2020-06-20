@@ -160,6 +160,11 @@ const StyledButtonDisabled = ({
     }
   `;
 
+export const SpinnerContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const StyledButton = styled.button<ButtonProps>`
   ${StyledButtonDefault};
   ${StyledButtonOutline};

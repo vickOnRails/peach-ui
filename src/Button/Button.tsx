@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 
-import StyledButton from "./Button.styles";
+import StyledButton, { SpinnerContainer } from "./Button.styles";
 import { ButtonProps } from "./types/Button.types";
+import Spinner from "../Spinner/Spinner";
 // import Spinner from "../Spinner/Spinner";
 
 const Button: FC<ButtonProps> = ({
@@ -12,7 +13,14 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <StyledButton {...rest} type={type} loading={loading}>
-      {loading ? <p>Loading...</p> : children}
+      {loading ? (
+        <SpinnerContainer>
+          <Spinner />
+          {children}
+        </SpinnerContainer>
+      ) : (
+        children
+      )}
     </StyledButton>
   );
 };

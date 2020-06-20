@@ -1,45 +1,58 @@
 import React from "react";
-import { keyframes } from "@emotion/core";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
+import theme from "../Theme";
 
-import "./Spinner.css";
-
-const spinnerSize = 35;
-
-const spinner = keyframes`
-  0% {
-      stroke-dashoffset: ${0.66 * spinnerSize};
-      transform: rotate(0deg);
-  } 50% {
-      stroke-dashoffset: ${3.14 * spinnerSize};
-      transform: rotate(400deg);
-  } 100% {
-      stroke-dashoffset: ${0.66 * spinnerSize};
-      transform: rotate(950deg);
-  }`;
-
-const StyledSpinner = styled.svg`
-  width: ${spinnerSize}px;
-  height: ${spinnerSize}px;
-  x: 0px;
-  y: 0px;
-  viewbox: 0 0 ${spinnerSize} ${spinnerSize};
-
-  circle {
-    fill: transparent;
-    stroke: #212121;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-dasharray: ${3.14 * spinnerSize};
-    animation: ${spinner} 2s linear infinite;
-    transform-origin: ${0.5 * spinnerSize}px ${0.5 * spinnerSize}px 0;
+const load = keyframes`
+0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 `;
 
-const Spinner = () => (
-  <StyledSpinner viewBox="0 0 40 40">
-    <circle cx="20" cy="20" r="18" className="circle" />
-  </StyledSpinner>
-);
+const StyledSpinner = styled.div`
+  font-size: 10px;
+  text-indent: -9999em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: ${theme.variants.primary.color};
+  background: ${`linear-gradient(to right, ${theme.variants.primary.color} 10%, rgba(255, 31, 31, 0) 42%)`};
+  position: relative;
+  animation: ${load} 0.75s infinite linear;
+  transform: translateZ(0);
+  margin-right: 0.5em;
+
+  &::before {
+    width: 50%;
+    height: 50%;
+    background: ${theme.variants.primary.color};
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+  }
+
+  &::after {
+    background: #fff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+`;
+
+const Spinner = (): JSX.Element => <StyledSpinner />;
 
 export default Spinner;
