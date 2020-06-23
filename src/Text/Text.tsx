@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { TextProps } from "./types/Text.types";
+import { TextProps } from "./Text.types";
 import { StyledText } from "./Text.styles";
 
 const Text: FC<TextProps> = (props) => {

@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import { Sizes } from "../../util/types";
+import { Sizes } from "../util/types";
 
 /**
  *  @param size - Desired size of the text @see {Sizes}

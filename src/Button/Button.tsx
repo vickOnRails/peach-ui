@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import StyledButton, { SpinnerContainer } from "./Button.styles";
-import { ButtonProps } from "./types/Button.types";
+import { ButtonProps } from "./Button.types";
 import Spinner from "../Spinner/Spinner";
 // import Spinner from "../Spinner/Spinner";
 

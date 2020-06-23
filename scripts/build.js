@@ -7,6 +7,7 @@ const libPath = path.join(__dirname, "../lib");
 const umdPath = path.join(libPath, "umd");
 const cjsPath = path.join(libPath, "cjs");
 const typesPath = path.join(libPath, "types");
+const cjsConfigPath = path.join(__dirname, "/util/tsconfig.cjs.json");
 
 const buildUMD = async () => {
   console.log(cyan("Building UMD Modules"));

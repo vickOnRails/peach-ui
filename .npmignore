@@ -6,3 +6,11 @@ scripts/
 webpack.config.js
 yarn.lock
 .eslintrc
+.storybook
+storybook-static
+playroom
+.todo
+jest.config.js
+playroom.config.js
+tsconfig.json
+.gitignore

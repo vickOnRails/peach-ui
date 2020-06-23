@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/core";
 import theme from "../Theme";
-import {
-  ButtonProps,
-  ButtonSizeProp,
-  BordersProps,
-} from "./types/Button.types";
+import { ButtonProps, ButtonSizeProp, BordersProps } from "./Button.types";
 import { VariantProp } from "../Theme/variants";
 
 /**

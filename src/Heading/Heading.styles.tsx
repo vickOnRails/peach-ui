@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import theme from "../Theme";
 import { HeadingLevelProps } from "../util/types";
-import { HeadingProps } from "./types/Heading.types";
+import { HeadingProps } from "./Heading.types";
 import { getHeadingFontSize } from "../util/getFontSize";
 /**
  * @param level - Specifies the type of Heading (h1, h2, h3, h4, h5, h6)

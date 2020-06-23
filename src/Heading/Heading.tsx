@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import StyledHeading from "./Heading.styles";
-import { HeadingProps } from "./types/Heading.types";
+import { HeadingProps } from "./Heading.types";
 
 const Heading: FC<HeadingProps> = (props) => {
   const { children, level } = props;

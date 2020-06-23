@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Sizes } from "../util/types";
-import { TextProps } from "./types/Text.types";
+import { TextProps } from "./Text.types";
 import { getFontSizeText } from "../util/getFontSize";
 
 // FIXME: Function currently returns only 2 values of text-transform.

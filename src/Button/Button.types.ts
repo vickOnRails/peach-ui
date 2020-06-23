@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 
-import { VariantProp } from "../../Theme/variants";
+import { VariantProp } from "../Theme/variants";
 
 export type VariantStyle = "outline" | "filled" | "ghost";
 export type TypeProp = "button" | "submit" | "reset";

@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { Sizes, HeadingLevelProps } from "../../util/types";
+import { Sizes, HeadingLevelProps } from "../util/types";
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   /**

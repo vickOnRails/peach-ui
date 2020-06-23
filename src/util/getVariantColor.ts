@@ -1,6 +1,6 @@
 import theme from "../Theme";
 import { VariantProp } from "../Theme/variants";
-import { VariantStyle } from "../Button/types/Button.types";
+import { VariantStyle } from "../Button/Button.types";
 
 const getVariantColor = (
   variant: VariantProp | undefined,
