@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "main": "./lib/cjs",
   "license": "MIT",
+  "types": "lib/types/index.d.ts",
   "repository": "https://github.com/vickOnRails/smart-ui/",
   "author": {
     "email": "victorofoegbu0009@gmail.com",
