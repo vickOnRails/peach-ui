@@ -7,17 +7,12 @@ import ThemeProvider, {
 } from "../src/ThemeProvider/ThemeProvider";
 import styled from "@emotion/styled";
 
-// App theme
-const theme = {
-  color: "brown",
-};
-
-export const Provider: FC<ThemeProviderProps> = (props) => {
+export const Provider = (props) => {
   const { children } = props;
   return (
     <>
       <CSSReset />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      {children}
     </>
   );
 };
@@ -35,6 +30,6 @@ const StyledStorybookWrapper = styled.section`
 // Wrap all stories in a themeContext
 addDecorator((StoryFn: Function) => (
   <StorybookWrapper>
-    <Provider theme={theme}>{StoryFn()}</Provider>
+    <Provider>{StoryFn()}</Provider>
   </StorybookWrapper>
 ));
